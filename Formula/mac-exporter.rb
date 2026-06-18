@@ -16,4 +16,11 @@ class MacExporter < Formula
       bin.install "mac-exporter"
     end
   end
+
+  service do
+    run opt_bin/"mac-exporter"
+    keep_alive true
+    log_path var/"log/mac-exporter.log"
+    error_log_path var/"log/mac-exporter-error.log"
+  end
 end
