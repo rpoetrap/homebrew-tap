@@ -5,12 +5,12 @@
 class MacExporter < Formula
   desc "A Prometheus exporter for macOS system metrics using powermetrics and vm_stat commands."
   homepage "https://github.com/rpoetrap/mac-exporter"
-  version "0.1.0"
+  version "0.1.1"
   depends_on :macos
 
   if Hardware::CPU.arm?
-    url "https://github.com/rpoetrap/mac-exporter/releases/download/v0.1.0/mac-exporter_Darwin_arm64.tar.gz"
-    sha256 "cff8dbc3bf6347c2ca0328010f6f3eeb8cbb733d2b878eb1f9c2d00e3c43b974"
+    url "https://github.com/rpoetrap/mac-exporter/releases/download/v0.1.1/mac-exporter_Darwin_arm64.tar.gz"
+    sha256 "4b60630fdf7cbf5e54490cc3bbc2d616bfeaf0429337ba05ca08c698dbc91402"
 
     define_method(:install) do
       bin.install "mac-exporter"
